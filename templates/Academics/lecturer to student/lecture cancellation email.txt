@@ -1,0 +1,15 @@
+To: name@email.com
+
+From: name@email.com
+
+Subject:___(Module code and name): No Lectures on ___(date)
+
+Dear students,
+
+There will be no lectures on ___(date) since __(reason). Please arrange an alternative time slot for this lecture within this week. Let me know the decided time slot as soon as possible.
+
+Thank you.
+
+Best regards,
+
+_________ (name, email signature)

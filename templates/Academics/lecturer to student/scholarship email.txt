@@ -1,0 +1,18 @@
+To: name@email.com
+
+From: name@email.com
+
+Subject: Academic Scholarships for __(year) Offered by ___(organisation offering the scholarship)
+
+Dear students,
+
+The ___ (organisation offering the scholarship) would like to offer __(no. of scholarships) scholarships to __(no. of students eligible for scholarship) outstanding undergraduate students from the ___(name of university) to assist with their academics for the year __(year). The details of the scholarship and the application are attached herewith.
+The duly filled application forms need to be emailed to ___(email address) on or before___(deadline for application).
+We truly appreciate your support and hope that this will assist your students in their future endeavours.
+For more information regarding this scholarship program please refer to the website at __(URL).
+
+Thank you.
+
+Best regards,
+
+_________ (name, email signature)

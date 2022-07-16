@@ -1,0 +1,20 @@
+To: name@email.com
+
+From: name@email.com
+
+Subject: __(number)th meeting of the Faculty Board of _______(faculty)
+
+Dear Sir/Madam,
+
+This is to inform you that the __th meeting of the Faculty Board of ___(faculty) will be held on ___(date), at ___(time) at ____(venue).
+
+The agenda of the meeting and the minutes of the previous meeting of the Faculty Board meeting will be sent in due course.
+
+Your participation in the meeting is highly appreciated.
+
+Thank you.
+
+Best regards,
+
+_________ (name, email signature)
+

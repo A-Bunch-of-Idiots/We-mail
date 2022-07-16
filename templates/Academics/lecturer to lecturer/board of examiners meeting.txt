@@ -1,0 +1,18 @@
+To: name@email.com
+
+From: name@email.com
+
+Subject: Board of Examiners Meeting
+
+Dear Sir/Madam,
+
+The Board of Examiners for __(year e.g.: - 1st, 2nd)th  _____(semester)th Semester Examination in ______(Degree Program, e.g.: - BBA, BSC, BCOM) - ____(intake year)  will meet on _____(date) at ____(time) in ______(venue), to evaluate and release the results.
+
+Your participation in the meeting is expected.
+
+Thank you.
+
+Best regards,
+
+_________ (name, email signature)
+

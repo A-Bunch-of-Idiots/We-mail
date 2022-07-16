@@ -1,0 +1,17 @@
+To: name@email.com
+
+From: name@email.com
+
+Subject:___(Assignment/ Assessment/ Quiz/ Lab), ___(module code and name)
+
+Dear students,
+
+____(Assignment/ Assessment/ Quiz/ Lab) is now available on the LMS. Deadline is ____(date).
+
+If you have any questions, send an email to ____ (email address).
+
+Thank you.
+
+Best regards,
+
+_________ (name, email signature)

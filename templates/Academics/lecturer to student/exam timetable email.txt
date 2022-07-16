@@ -1,0 +1,15 @@
+To: name@email.com
+
+From: name@email.com
+
+Subject: ___(semester) Exam Timetable
+
+Dear students,
+
+Please find the attached ____(semester and intake year) Exam timetable for all the modules.
+
+Thank you.
+
+Best regards,
+
+_________ (name, email signature)
