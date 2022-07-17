@@ -1,0 +1,11 @@
+Subscription Plan Upgrade Promotional Email
+To: name@email.com
+From: name@email.com
+Subject: Last chance to upgrade ____(Product)
+Hello _____ (receiver's name),
+Are you still using the free version of our ____(product)? If so, now is the time to upgrade. For a limited time, we’re offering ___%(discount percentage) off all premium plans.
+With a premium subscription, you’ll get access to exclusive features and priority support. Plus, you’ll be helping us continue to develop ____(product) and add new features.
+To upgrade, click the link below. And don’t forget to use the promo code __(PROMO CODE) at checkout to get your discount.
+Upgrade now: ___(URL)
+Promo code: ____(PROMO CODE)
+

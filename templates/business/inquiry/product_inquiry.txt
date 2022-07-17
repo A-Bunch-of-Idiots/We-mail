@@ -1,0 +1,13 @@
+Product Inquiry Email
+
+To: name@email.com
+From: name@email.com
+Subject: Product Inquiry 
+Dear Mr./Mrs./Ms. _____ (Name of the person),
+I am looking for a __________ (product name). I understand that your company deals with __________ (product range), and hence I am writing this email. I need __________ (quantity) of them. I am looking for __________ (Specifications) and in the range __________ (price range). I want the product with __________ (warranty).
+Kindly let me know the__________ (details required) available with you. Also, as I am interested in buying more than __ (no. of products), let me know if I can get them at a discounted rate. Do let me know if there are any better options for me to buy in the same price range.
+I would be awaiting your reply.
+Thank you.
+Yours Sincerely,
+_______________
+(Email Signature)

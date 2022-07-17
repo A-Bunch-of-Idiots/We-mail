@@ -1,0 +1,12 @@
+Insurance Appeal Email
+To: name@email.com
+From: name@email.com
+Subject: Insurance Appeal
+Respected Sir/Ma’am,
+This is to bring it to your notice that we would like to claim our company’s insurance amount of the policy number ____ which we had enrolled on ____(date). As per the _____(policy), we are entitled to the amount in case of _____ (e.g.: - property damage, theft). _________(Explain why you need this).
+We would like to withdraw the insurance amount and we request you to deposit the amount in the account number mentioned in the papers as soon as possible. Attached herewith are ____(documents such as insurance policy form, evidence of reason for withdrawal).
+Hoping for a quick response and action from your side.
+Yours sincerely,
+____________
+(Email signature)
+

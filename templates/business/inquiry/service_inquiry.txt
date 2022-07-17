@@ -1,0 +1,14 @@
+Service Inquiry Email
+To: name@email.com
+From: name@email.com
+Subject: Service Inquiry
+Dear ____________(receiver’s name),
+We are ______________(company name), a firm based in _______________(location), dealing in _____________________(nature of the business)
+Currently, we are looking for a company to _____________________________________(requirements).
+We heard about your firm and wanted to hire your professional services for our business. So, it would be great if you could send in the details regarding the same such as the prices, terms, and conditions, and all other information that is important.
+Thank you in advance. We are looking forward to receiving the information soon.
+Yours Sincerely,
+____________
+(Email Signature)
+
+

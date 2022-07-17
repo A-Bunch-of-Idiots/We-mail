@@ -1,0 +1,12 @@
+Discount Inquiry Email
+
+To: name@email.com
+From: name@email.com
+Subject: Discount Inquiry
+Dear _________ (name of the receiver),
+We are happy to be your loyal customer for the last ___ (no. of) years and during this time we have always been pleased with the quality of ____(the product or service) you supply and the level of customer service you provide.
+Furthermore, in all this time during which our firms have done business together, we have been prompt in our payments. Since ________ (reason, e.g.: - we are currently experiencing certain financial difficulties, wish to increase our business volume even more), we would like to request a ___ (optional discount percentage) discount on future orders.
+We hope to hear from you soon regarding this proposal.
+Yours sincerely,
+________________
+(Email Signature)

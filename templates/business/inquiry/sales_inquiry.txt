@@ -1,0 +1,17 @@
+Sales Inquiry Email
+To: name@email.com
+From: name@email.com
+Subject: Sales Inquiry
+Dear _________ (name of the receiver),
+The ___________ department would like to know the sales of the last month. The sales department had submitted the reports but __________ (mention why you are asking for the sales report again).
+_______________________(Also, mention any other thing that you would want to know along with the sales report such as vacancy in the sales department, etc.)
+Kindly report to this letter on or before _________(DD/MM/YYYY). We have a deadline to meet and would be grateful if you could send us the details at the earliest so that we can continue with our work. In case you have any questions, kindly revert to the same email address.
+Thank you
+Yours sincerely,
+________
+(Email Signature)
+
+
+
+
+

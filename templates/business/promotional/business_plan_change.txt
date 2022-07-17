@@ -1,0 +1,13 @@
+Changes to Business Plan Promotional Email
+To: name@email.com
+From: name@email.com
+Subject: Changes to your ___(product) plan
+Hello _____ (receiver's name),
+We’re making some changes to our __(product) plans, and we wanted to let you know what’s coming. First, we’re increasing the price of our ___(product) plan by __(amount). However, we’re also adding some new features that we think you’ll love.
+Here are some of the new features you can expect to see soon:
+____(new feature)
+____(new feature)
+____(new feature)
+We know that change can be hard, but we hope you’ll be happy with the new features.
+This is the last chance for you to upgrade at a lower price. After this, the monthly price will be ___(price). So, are you ready to upgrade?
+As always, if you have any questions or concerns, please don’t hesitate to reach out to us.

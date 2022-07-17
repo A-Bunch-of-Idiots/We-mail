@@ -1,0 +1,9 @@
+Loyal Customer Promotional Email
+To: name@email.com
+From: name@email.com
+Subject: Thanks for being a loyal customer. Here’s an offer for you.
+Hello _____ (receiver's name),
+Thank you for being a dedicated customer of our ______(product or service name). We appreciate your business, and we’re always looking for ways to give back to our loyal customers.
+That’s why, for a limited time, we’re offering a special promotional discount just for you. Use the promo code _______(PROMO CODE) at checkout to get __%(discount percentage) off your purchase when you buy ___(Plan) for a year.
+Don’t miss out on this great opportunity – click the link below to purchase now.
+_____(URL)

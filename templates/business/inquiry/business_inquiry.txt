@@ -1,0 +1,13 @@
+Business Inquiry Email
+
+To: name@email.com
+From: name@email.com
+Subject: Business Inquiry
+Dear _________ (name of the receiver),
+We would like to buy a lot of ___(product). We would like to see your company catalogue which has details of all the products that you manufacture. We will go through it and see if any products meet our requirements.
+We have a huge requirement, and we hope that you will be able to meet our demands. We are in search of ____(your requirement). We would also like to know if you make a custom-made product as per the requirement within a stipulated time.
+In case we like your designs and products we would like to place an order, and we would work out the pricing in person. We could send one of our representatives from our end to oversee the products and finalise the price.
+We shall discuss the further matter after you send the catalogue. In a case of any queries, feel free to contact me.
+Yours sincerely,
+____________
+(Email Signature)

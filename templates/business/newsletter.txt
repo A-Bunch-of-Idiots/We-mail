@@ -1,0 +1,8 @@
+Newsletter Email
+To: name@email.com
+From: name@email.com
+Subject: ___ (feature) Awaits!
+Hello _____ (receiver's name),
+Since the last edition of our newsletter was such a smashing success, we’re back with more delightful content for you. 
+Check out our ___ (new feature being introduced via this newsletter). With this, you can ____ (uses of this feature). 
+We don’t want you to miss out on our latest integration. Upgrade your account to gain access to this feature right now!
