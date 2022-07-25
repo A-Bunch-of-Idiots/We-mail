@@ -10,12 +10,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'We-Mail',
       theme: ThemeData(
-       
-        primarySwatch: Colors.blue,
+        // Define the default brightness and colors.
+        brightness: Brightness.dark,
+        primaryColor: Colors.lightBlue[800],
+
+        // Define the default font family.
+        fontFamily: 'Georgia',
+
+        // Define the default `TextTheme`. Use this to specify the default
+        // text styling for headlines, titles, bodies of text, and more.
+        textTheme: const TextTheme(
+          headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+          headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'We-Mail'),
     );
   }
 }
@@ -49,27 +61,8 @@ class _MyHomePageState extends State<MyHomePage> {
         
         title: Text(widget.title),
       ),
-      body: Center(
-       
-        child: Column(
-          
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // body: 
+      
     );
   }
 }
