@@ -42,17 +42,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final List categories=["General","Academics","Work","Business"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
+          title: Center(child:Text(widget.title)),
         ),
-        body: CategoryOverview());
+        body: ListView(children:[CategoryOverview(categories[0]),CategoryOverview(categories[1]),CategoryOverview(categories[2]),CategoryOverview(categories[3])]));
   }
 }
 
 class CategoryOverview extends StatelessWidget {
+  CategoryOverview(this.title);
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -66,7 +69,7 @@ class CategoryOverview extends StatelessWidget {
             width: 30.0,
           ),
           Row(
-            children: [SizedBox(height: 10, width: 15), CategoryName()],
+            children: [SizedBox(height: 10, width: 15), CategoryName(title)],
           ),
           // CategoryName(),
           TemplatesOverview(),
@@ -75,9 +78,11 @@ class CategoryOverview extends StatelessWidget {
 }
 
 class CategoryName extends StatelessWidget {
+  CategoryName(this.title);
+  final String title;
   @override
   Widget build(BuildContext context) {
-    return Text("Category Name");
+    return Text(title,style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),);
   }
 }
 
