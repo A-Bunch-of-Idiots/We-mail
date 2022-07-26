@@ -53,21 +53,44 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: ,
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          // Add your onPressed code here!
-        },
-        label: const Text('Edit'),
-        icon: const Icon(Icons.edit),
-        highlightElevation: 50,
-        backgroundColor: Colors.blue,
-      ),
-
-      // body:
-    );
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: Column(
+            children: [
+              Align(
+                alignment: Alignment(1, -0.7),
+                child: FloatingActionButton.extended(
+                  onPressed: () {
+                    // Add your onPressed code here!
+                  },
+                  label: const Text('Edit'),
+                  icon: const Icon(Icons.edit),
+                  highlightElevation: 50,
+                  backgroundColor: Colors.blue,
+                ),
+              ),
+              Expanded(
+                child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: SizedBox(
+                      width: 400.0,
+                      height: 800,
+                      child: Card(
+                        color: Colors.grey,
+                        child: Center(
+                          child: Text(
+                            'GeksForGeeks',
+                            style: TextStyle(color: Colors.white),
+                          ), //Text
+                        ), //Center
+                      ), //Card
+                    )),
+              )
+            ],
+          ),
+        ));
   }
 }
