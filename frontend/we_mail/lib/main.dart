@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './category.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,6 +48,15 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
+          // actions: [
+          //   IconButton(
+          //     icon: Icon(Icons.settings),
+          //     onPressed: () {
+          //       Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CategoryPage(title: 'We-Mail')));
+          //     },
+          //   ),
+          //   // add more IconButton
+          // ],
         ),
         body: CategoryOverview());
   }
@@ -77,7 +87,22 @@ class CategoryOverview extends StatelessWidget {
 class CategoryName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text("Category Name");
+    return FlatButton(
+                      onPressed: () => {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CategoryPage(title: 'We-Mail')))},
+                      child: Column(
+                        // Replace with a Row for horizontal icon + text
+                        children: <Widget>[
+                          Text(
+                            "Category Name",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                    );
   }
 }
 
@@ -203,3 +228,6 @@ class TemplatesOverview extends StatelessWidget {
 //   }
   }
 }
+
+
+
