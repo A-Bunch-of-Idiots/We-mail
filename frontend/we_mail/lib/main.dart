@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './category.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // Define the default brightness and colors.
         brightness: Brightness.dark,
-        primaryColor: Colors.lightBlue[800],
+        // primaryColor: Colors.lightBlue[800],
 
         // Define the default font family.
         fontFamily: 'Georgia',
@@ -47,7 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+
           title: Center(child:Text(widget.title)),
+
         ),
         body: ListView(children:[CategoryOverview(categories[0]),CategoryOverview(categories[1]),CategoryOverview(categories[2]),CategoryOverview(categories[3])]));
   }
@@ -82,14 +85,34 @@ class CategoryName extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
+
     return Text(title,style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),);
+
+//     return FlatButton(
+//                       onPressed: () => {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CategoryPage(title: 'We-Mail')))},
+//                       child: Column(
+//                         // Replace with a Row for horizontal icon + text
+//                         children: <Widget>[
+//                           Text(
+//                             "Category Name",
+//                             style: TextStyle(
+//                               fontSize: 20,
+//                               fontWeight: FontWeight.w700,
+//                               color: Colors.white,
+//                             ),
+//                           )
+//                         ],
+//                       ),
+//                     );
+
   }
 }
 
 class TemplatesOverview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-      final double templateHeight = MediaQuery.of(context).size.height * 0.30 - 100;
+    final double templateHeight =
+        MediaQuery.of(context).size.height * 0.30 - 100;
 
     return SingleChildScrollView(
       physics: BouncingScrollPhysics(),
@@ -105,7 +128,9 @@ class TemplatesOverview extends StatelessWidget {
                 width: 150,
                 margin: EdgeInsets.only(right: 20),
                 height: templateHeight,
-                decoration: BoxDecoration(color: Colors.orange.shade400, borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                decoration: BoxDecoration(
+                    color: Colors.orange.shade400,
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
@@ -113,7 +138,10 @@ class TemplatesOverview extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "Most\nFavorites",
-                        style: TextStyle(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 10,
@@ -130,7 +158,9 @@ class TemplatesOverview extends StatelessWidget {
                 width: 150,
                 margin: EdgeInsets.only(right: 20),
                 height: templateHeight,
-                decoration: BoxDecoration(color: Colors.blue.shade400, borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                decoration: BoxDecoration(
+                    color: Colors.blue.shade400,
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 child: Container(
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -139,7 +169,10 @@ class TemplatesOverview extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           "Newest",
-                          style: TextStyle(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
                           height: 10,
@@ -157,7 +190,9 @@ class TemplatesOverview extends StatelessWidget {
                 width: 150,
                 margin: EdgeInsets.only(right: 20),
                 height: templateHeight,
-                decoration: BoxDecoration(color: Colors.lightBlueAccent.shade400, borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                decoration: BoxDecoration(
+                    color: Colors.lightBlueAccent.shade400,
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
@@ -165,7 +200,10 @@ class TemplatesOverview extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "Super\nSaving",
-                        style: TextStyle(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 10,
@@ -183,7 +221,6 @@ class TemplatesOverview extends StatelessWidget {
         ),
       ),
     );
-  
 
 // class TemplateBanner extends StatelessWidget{
 //   @override
@@ -191,5 +228,8 @@ class TemplatesOverview extends StatelessWidget {
 //     // TODO: implement build
 //     throw UnimplementedError();
 //   }
+  }
+}
 
-}}
+
+
