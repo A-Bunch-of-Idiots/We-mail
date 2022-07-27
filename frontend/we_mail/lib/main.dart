@@ -86,24 +86,17 @@ class CategoryName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Text(title,style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),);
+    // return Text(title,style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),);
 
-//     return FlatButton(
-//                       onPressed: () => {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CategoryPage(title: 'We-Mail')))},
-//                       child: Column(
-//                         // Replace with a Row for horizontal icon + text
-//                         children: <Widget>[
-//                           Text(
-//                             "Category Name",
-//                             style: TextStyle(
-//                               fontSize: 20,
-//                               fontWeight: FontWeight.w700,
-//                               color: Colors.white,
-//                             ),
-//                           )
-//                         ],
-//                       ),
-//                     );
+    return FlatButton(
+                      onPressed: () => {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CategoryPage(title: 'We-Mail',subtitle:"Academics")))},
+                      child: Column(
+                        // Replace with a Row for horizontal icon + text
+                        children: <Widget>[
+                          Text(title,style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),),
+                        ],
+                      ),
+                    );
 
   }
 }
