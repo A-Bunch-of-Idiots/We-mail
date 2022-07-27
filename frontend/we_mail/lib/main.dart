@@ -43,26 +43,22 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final List categories=["General","Academics","Work","Business"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.title),
-          // actions: [
-          //   IconButton(
-          //     icon: Icon(Icons.settings),
-          //     onPressed: () {
-          //       Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CategoryPage(title: 'We-Mail')));
-          //     },
-          //   ),
-          //   // add more IconButton
-          // ],
+
+          title: Center(child:Text(widget.title)),
+
         ),
-        body: CategoryOverview());
+        body: ListView(children:[CategoryOverview(categories[0]),CategoryOverview(categories[1]),CategoryOverview(categories[2]),CategoryOverview(categories[3])]));
   }
 }
 
 class CategoryOverview extends StatelessWidget {
+  CategoryOverview(this.title);
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -76,7 +72,7 @@ class CategoryOverview extends StatelessWidget {
             width: 30.0,
           ),
           Row(
-            children: [SizedBox(height: 10, width: 15), CategoryName()],
+            children: [SizedBox(height: 10, width: 15), CategoryName(title)],
           ),
           // CategoryName(),
           TemplatesOverview(),
@@ -85,24 +81,30 @@ class CategoryOverview extends StatelessWidget {
 }
 
 class CategoryName extends StatelessWidget {
+  CategoryName(this.title);
+  final String title;
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-                      onPressed: () => {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CategoryPage(title: 'We-Mail')))},
-                      child: Column(
-                        // Replace with a Row for horizontal icon + text
-                        children: <Widget>[
-                          Text(
-                            "Category Name",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      ),
-                    );
+
+    return Text(title,style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),);
+
+//     return FlatButton(
+//                       onPressed: () => {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CategoryPage(title: 'We-Mail')))},
+//                       child: Column(
+//                         // Replace with a Row for horizontal icon + text
+//                         children: <Widget>[
+//                           Text(
+//                             "Category Name",
+//                             style: TextStyle(
+//                               fontSize: 20,
+//                               fontWeight: FontWeight.w700,
+//                               color: Colors.white,
+//                             ),
+//                           )
+//                         ],
+//                       ),
+//                     );
+
   }
 }
 
