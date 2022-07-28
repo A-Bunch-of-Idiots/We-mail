@@ -84,15 +84,15 @@ class Templates extends StatelessWidget {
                       children: <Widget>[
                         FlatButton(
                           onPressed: () => {},
-                          color: Colors.orange,
+                          color: Colors.orange.shade400,
                           padding: EdgeInsets.all(12.0),
                           child: Column(
                             // Replace with a Row for horizontal icon + text
                             children: <Widget>[
                               Text(
-                                "Academic\nPosition\nApplication",
+                                "Apply\nAcademic\nPosition",
                                 style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                 ),
@@ -278,7 +278,7 @@ class Templates extends StatelessWidget {
                             // Replace with a Row for horizontal icon + text
                             children: <Widget>[
                               Text(
-                                "Lecture\nCancellation\nMail",
+                                "Cancel\nLecture",
                                 style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w700,

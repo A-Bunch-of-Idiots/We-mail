@@ -38,7 +38,7 @@ class _ViewTemplateState extends State<ViewTemplate> {
             child: Container(
                 child: Text(
                     "To: name@email.com \n\nFrom: name@email.com \n\nSubject: Academic Administrative Position ___(Intake year) (___(posts, e.g.: -  Student Counsellor, Academic Sub Warden))\n\nDear Sir/Madam,\n\nPlease be kind enough to circulate the letter of the advertisement and the format attached herewith among your permanent academic staff enabling them to apply for the ___ (posts, e.g.: - Student Counsellor, Academic Sub Warden) posts before the closing date.\n\nThank you.\n\nBest regards,\n\n_________ (name, email signature)\n\n",
-                    style: TextStyle(fontSize: 18.0))),
+                    style: TextStyle(fontSize: 18.0,color: Colors.black))),
           ),
         ));
   }
