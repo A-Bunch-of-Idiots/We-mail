@@ -21,9 +21,7 @@ class _EditTemplateState extends State<EditTemplate> {
                 padding: EdgeInsets.only(right: 20.0),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            const CreateTemplate(title: 'We-Mail')));
+                   
                   },
                   child: Icon(
                     Icons.check_circle,

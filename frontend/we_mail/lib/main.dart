@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:we_mail/create_template.dart';
 import './category.dart';
-
+import './create_template.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'We-Mail',
       theme: ThemeData(
         // Define the default brightness and colors.
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
         // primaryColor: Colors.lightBlue[800],
 
         // Define the default font family.
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
           headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+          bodyText2: TextStyle(fontSize: 14.0, fontFamily:'Raleway'),
         ),
       ),
       home: const MyHomePage(title: 'We-Mail'),
@@ -93,7 +94,7 @@ class CategoryName extends StatelessWidget {
                       child: Column(
                         // Replace with a Row for horizontal icon + text
                         children: <Widget>[
-                          Text(title,style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),),
+                          Text(title,style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0)),
                         ],
                       ),
                     );
@@ -130,7 +131,7 @@ class TemplatesOverview extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "Most\nFavorites",
+                        "Template 1",
                         style: TextStyle(
                             fontSize: 25,
                             color: Colors.white,
@@ -139,10 +140,7 @@ class TemplatesOverview extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      Text(
-                        "20 Items",
-                        style: TextStyle(fontSize: 16, color: Colors.white),
-                      ),
+                      
                     ],
                   ),
                 ),
@@ -161,7 +159,7 @@ class TemplatesOverview extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          "Newest",
+                          "Template 2",
                           style: TextStyle(
                               fontSize: 25,
                               color: Colors.white,
@@ -170,10 +168,7 @@ class TemplatesOverview extends StatelessWidget {
                         SizedBox(
                           height: 10,
                         ),
-                        Text(
-                          "20 Items",
-                          style: TextStyle(fontSize: 16, color: Colors.white),
-                        ),
+                        
                       ],
                     ),
                   ),
@@ -192,7 +187,7 @@ class TemplatesOverview extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "Super\nSaving",
+                        "Template 3",
                         style: TextStyle(
                             fontSize: 25,
                             color: Colors.white,
@@ -201,14 +196,66 @@ class TemplatesOverview extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      Text(
-                        "20 Items",
-                        style: TextStyle(fontSize: 16, color: Colors.white),
-                      ),
+                      
                     ],
                   ),
                 ),
               ),
+              Container(
+                  width: 150,
+                  margin: EdgeInsets.only(right: 20),
+                  height: templateHeight,
+                  decoration: BoxDecoration(
+                    color: Colors.blue.shade400,
+                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        FlatButton(
+                          onPressed: () => { Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) =>
+                            const CreateTemplate(title: 'We-Mail')))},
+                    color: Colors.blue.shade400,
+                          padding: EdgeInsets.all(12.0),
+                          child: Column(
+                            // Replace with a Row for horizontal icon + text
+                            children: <Widget>[
+                              Icon(
+                                
+                                Icons.add,size: 50,color: Colors.white,),
+                              
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              // Container(
+              //   width: 150,
+              //   margin: EdgeInsets.only(right: 20),
+              //   height: templateHeight,
+              //   decoration: BoxDecoration(
+              //       color: Colors.lightBlueAccent.shade400,
+              //       borderRadius: BorderRadius.all(Radius.circular(20.0))),
+              //   child: Padding(
+              //     padding: const EdgeInsets.all(12.0),
+              //     child: Column(
+              //       crossAxisAlignment: CrossAxisAlignment.start,
+              //       children: <Widget>[Icon(Icons.add),
+              //         SizedBox(
+              //           height: 10,
+              //         ),
+              //         Text(
+              //           "20 Items",
+              //           style: TextStyle(fontSize: 16, color: Colors.white),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
