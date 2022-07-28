@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'edit_template.dart';
 
 class ViewTemplate extends StatefulWidget {
   const ViewTemplate({Key? key, required this.title}) : super(key: key);
@@ -20,7 +21,10 @@ class _ViewTemplateState extends State<ViewTemplate> {
         floatingActionButton: Align(
           alignment: Alignment.bottomRight,
           child: FloatingActionButton.extended(
-            onPressed: () {},
+            onPressed: () => {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const EditTemplate(title: 'We-Mail')))
+            },
             label: const Text('Edit'),
             icon: const Icon(Icons.edit),
             highlightElevation: 50,
