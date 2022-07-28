@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CategoryPage extends StatefulWidget {
-  const CategoryPage({Key? key, required this.title}) : super(key: key);
+  const CategoryPage({Key? key, required this.title,required this.subtitle}) : super(key: key);
 
   final String title;
+  final subtitle;
 
   @override
   State<CategoryPage> createState() => _CategoryPageState();
@@ -13,11 +14,13 @@ class _CategoryPageState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text(widget.title)), body: TemplateList());
+        appBar: AppBar(title: Text(widget.title)), body: TemplateList(widget.subtitle));
   }
 }
 
 class TemplateList extends StatelessWidget {
+  TemplateList(this.subtitle);
+  final String subtitle;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -31,7 +34,7 @@ class TemplateList extends StatelessWidget {
             width: 30.0,
           ),
           Row(
-            children: [SizedBox(height: 10, width: 15), Text('Bank',  style: TextStyle(
+            children: [SizedBox(height: 10, width: 15), Text(subtitle,  style: TextStyle(
                               fontSize: 30,
                               fontWeight: FontWeight.w700,
                               color: Colors.white,
@@ -78,7 +81,7 @@ class Templates extends StatelessWidget {
                         // Replace with a Row for horizontal icon + text
                         children: <Widget>[
                           Text(
-                            "Fund Transfer\nRequest",
+                            "Academic\nPosition\nApplication",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
@@ -113,7 +116,7 @@ class Templates extends StatelessWidget {
                         // Replace with a Row for horizontal icon + text
                         children: <Widget>[
                           Text(
-                            "Bank Verification\nLetter\nRequest",
+                            "Deadline\nExtension\nRequest",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
@@ -154,7 +157,7 @@ class Templates extends StatelessWidget {
                         // Replace with a Row for horizontal icon + text
                         children: <Widget>[
                           Text(
-                            "Change Address\nBranch\nRequest",
+                            "Excuse\nfor\nAbsence",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
@@ -189,7 +192,7 @@ class Templates extends StatelessWidget {
                         // Replace with a Row for horizontal icon + text
                         children: <Widget>[
                           Text(
-                            "Renewal of\nATM card",
+                            "Recorrection\nRequest",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
@@ -230,7 +233,7 @@ class Templates extends StatelessWidget {
                         // Replace with a Row for horizontal icon + text
                         children: <Widget>[
                           Text(
-                            "New\nBanking\nApplication",
+                            "Result\nSheet\nRequest",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
@@ -265,7 +268,7 @@ class Templates extends StatelessWidget {
                         // Replace with a Row for horizontal icon + text
                         children: <Widget>[
                           Text(
-                            "New\nPassbook\nRequest",
+                            "Lecture\nCancellation\nMail",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
