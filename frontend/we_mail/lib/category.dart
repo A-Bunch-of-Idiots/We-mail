@@ -44,7 +44,7 @@ class TemplateList extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w700,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               )
             ],
@@ -92,7 +92,7 @@ class Templates extends StatelessWidget {
                               Text(
                                 "Apply\nAcademic\nPosition",
                                 style: TextStyle(
-                                  fontSize: 18,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.w700,
                                   color: Colors.white,
                                 ),
@@ -122,7 +122,7 @@ class Templates extends StatelessWidget {
                                 builder: (context) =>
                                     const ViewTemplate(title: 'We-Mail')))
                           },
-                          color: Colors.orange,
+                          color: Colors.orange.shade400,
                           padding: EdgeInsets.all(12.0),
                           child: Column(
                             // Replace with a Row for horizontal icon + text
@@ -163,7 +163,7 @@ class Templates extends StatelessWidget {
                       children: <Widget>[
                         FlatButton(
                           onPressed: () => {},
-                          color: Colors.orange,
+                          color:Colors.orange.shade400,
                           padding: EdgeInsets.all(12.0),
                           child: Column(
                             // Replace with a Row for horizontal icon + text
@@ -197,7 +197,7 @@ class Templates extends StatelessWidget {
                       children: <Widget>[
                         FlatButton(
                           onPressed: () => {},
-                          color: Colors.orange,
+                          color: Colors.orange.shade400,
                           padding: EdgeInsets.all(12.0),
                           child: Column(
                             // Replace with a Row for horizontal icon + text
@@ -238,7 +238,7 @@ class Templates extends StatelessWidget {
                       children: <Widget>[
                         FlatButton(
                           onPressed: () => {},
-                          color: Colors.orange,
+                          color: Colors.orange.shade400,
                           padding: EdgeInsets.all(12.0),
                           child: Column(
                             // Replace with a Row for horizontal icon + text
@@ -272,7 +272,7 @@ class Templates extends StatelessWidget {
                       children: <Widget>[
                         FlatButton(
                           onPressed: () => {},
-                          color: Colors.orange,
+                          color:Colors.orange.shade400,
                           padding: EdgeInsets.all(12.0),
                           child: Column(
                             // Replace with a Row for horizontal icon + text
