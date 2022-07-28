@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'view_template3.dart';
+import './view_template3.dart';
 
 class CategoryPage extends StatefulWidget {
   const CategoryPage({Key? key, required this.title, required this.subtitle})
