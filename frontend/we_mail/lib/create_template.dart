@@ -43,11 +43,17 @@ class _CreateTemplateState extends State<CreateTemplate> {
                         labelText: 'Title',
                       ),
                     ),
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        border: UnderlineInputBorder(),
+                        labelText: 'Subject',
+                      ),
+                    ),
                     TextField(
                       maxLines: null,
                       textCapitalization: TextCapitalization.sentences,
                       decoration: const InputDecoration(
-                          labelText: 'Content', border: InputBorder.none),
+                          labelText: 'Body', border: InputBorder.none),
                       style: TextStyle(
                         fontSize: 19,
                         height: 1.5,

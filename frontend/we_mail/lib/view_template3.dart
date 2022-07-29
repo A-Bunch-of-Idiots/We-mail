@@ -37,8 +37,8 @@ class _ViewTemplateState extends State<ViewTemplate> {
             scrollDirection: Axis.vertical,
             child: Container(
                 child: Text(
-                    "To: name@email.com \n\nFrom: name@email.com \n\nSubject: Academic Administrative Position ___(Intake year) (___(posts, e.g.: -  Student Counsellor, Academic Sub Warden))\n\nDear Sir/Madam,\n\nPlease be kind enough to circulate the letter of the advertisement and the format attached herewith among your permanent academic staff enabling them to apply for the ___ (posts, e.g.: - Student Counsellor, Academic Sub Warden) posts before the closing date.\n\nThank you.\n\nBest regards,\n\n_________ (name, email signature)\n\n",
-                    style: TextStyle(fontSize: 18.0,color: Colors.black))),
+                    "Dear sir/madam,\n\nI email you to request a time extension till ____ (desired date for submission) for the completion of ________ (assignment), initially due on _____ (initial due date). Due to _________ (reason), I haven’t been able to finish the assignment yet, and I believe I’ll need some more time to review and complete it.\n\nI appreciate your time and consideration and goodness in responding to my appeal. Please inform me of your decision as soon as possible.\n\nThank you.\n\nBest regards,_________ (name, index number and email signature)",
+                    style: TextStyle(fontSize: 18.0, color: Colors.black))),
           ),
         ));
   }
