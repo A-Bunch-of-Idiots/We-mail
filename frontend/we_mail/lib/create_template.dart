@@ -19,7 +19,33 @@ class _CreateTemplateState extends State<CreateTemplate> {
             Padding(
                 padding: EdgeInsets.only(right: 20.0),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () => showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => SizedBox(
+                      child: AlertDialog(
+                        content: Padding(
+                          padding: const EdgeInsets.only(
+                              left: 45, top: 8, bottom: 8),
+                          child: const Text('Template Saved '),
+                        ),
+                        // actions: <Widget>[
+                        //   FlatButton(
+                        //     child: const Text('Cancel'),
+                        //     onPressed: () {
+                        //       Navigator.pop(context, 'Cancel');
+                        //     },
+                        //   ),
+                        //   FlatButton(
+                        //     child: const Text('Send'),
+                        //     onPressed: () {
+                        //       Navigator.pop(context, 'Send');
+                        //       showToast();
+                        //     },
+                        //   )
+                        // ],
+                      ),
+                    ),
+                  ),
                   child: Icon(
                     Icons.check_circle,
                     size: 26.0,
