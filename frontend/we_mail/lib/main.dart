@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:we_mail/create_template.dart';
 import './category.dart';
 import './create_template.dart';
-void main() {
+import 'package:we_mail/handler/database_manager.dart';
+import './helper/object_box.dart';
+
+late ObjectBox objectBox;
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  objectBox = await ObjectBox.init();
   runApp(const MyApp());
 }
 
@@ -26,7 +32,7 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
           headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          bodyText2: TextStyle(fontSize: 14.0, fontFamily:'Raleway'),
+          bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Raleway'),
         ),
       ),
       home: const MyHomePage(title: 'We-Mail'),
@@ -44,16 +50,74 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final List categories=["General","Academics","Work","Business"];
+  final List categories = ["General", "Academics", "Work", "Business"];
+  late Stream<List<Template>> streamTemplates;
+  @override
+  void initState() {
+    super.initState();
+
+    streamTemplates = objectBox.getTemplates();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-
-          title: Center(child:Text(widget.title)),
-
+          title: Center(child: Text(widget.title)),
         ),
-        body: ListView(children:[CategoryOverview(categories[0]),CategoryOverview(categories[1]),CategoryOverview(categories[2]),CategoryOverview(categories[3])]));
+        // body: ListView(children: [
+        //   CategoryOverview(categories[0]),
+        //   CategoryOverview(categories[1]),
+        //   CategoryOverview(categories[2]),
+        //   CategoryOverview(categories[3])
+        // ]
+        // )
+        body: StreamBuilder<List<Template>>(
+          stream: streamTemplates,
+          builder: (context, snapshot) {
+            if (!snapshot.hasData) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            } else {
+              final templates = snapshot.data!;
+
+              return ListView.builder(
+                itemCount: templates.length,
+                itemBuilder: (context, index) {
+                  final template = templates[index];
+
+                  return ListTile(
+                    title: Text(template.id.toString()),
+                    subtitle: Text(template.category),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.delete),
+                      onPressed: () => objectBox.deleteTemplate(template.id),
+                    ),
+                    onTap: () {
+                      template.category = "Academics";
+                      // template.email = Faker().internet.email();
+
+                      objectBox.insertTemplate(template);
+                    },
+                  );
+                },
+              );
+            }
+          },
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.add),
+          onPressed: () {
+            final template = Template(
+              category: "Work",
+            );
+
+            objectBox.insertTemplate(template);
+          },
+        ),
+      
+        );
   }
 }
 
@@ -86,19 +150,24 @@ class CategoryName extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-
     // return Text(title,style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0),);
 
     return FlatButton(
-                      onPressed: () => {Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CategoryPage(title: 'We-Mail',subtitle:"Academics")))},
-                      child: Column(
-                        // Replace with a Row for horizontal icon + text
-                        children: <Widget>[
-                          Text(title,style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 2.0)),
-                        ],
-                      ),
-                    );
-
+      onPressed: () => {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) =>
+                const CategoryPage(title: 'We-Mail', subtitle: "Academics")))
+      },
+      child: Column(
+        // Replace with a Row for horizontal icon + text
+        children: <Widget>[
+          Text(title,
+              style: DefaultTextStyle.of(context)
+                  .style
+                  .apply(fontSizeFactor: 2.0)),
+        ],
+      ),
+    );
   }
 }
 
@@ -140,7 +209,6 @@ class TemplatesOverview extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      
                     ],
                   ),
                 ),
@@ -168,7 +236,6 @@ class TemplatesOverview extends StatelessWidget {
                         SizedBox(
                           height: 10,
                         ),
-                        
                       ],
                     ),
                   ),
@@ -196,43 +263,45 @@ class TemplatesOverview extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      
                     ],
                   ),
                 ),
               ),
               Container(
-                  width: 150,
-                  margin: EdgeInsets.only(right: 20),
-                  height: templateHeight,
-                  decoration: BoxDecoration(
+                width: 150,
+                margin: EdgeInsets.only(right: 20),
+                height: templateHeight,
+                decoration: BoxDecoration(
                     color: Colors.blue.shade400,
-                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: <Widget>[
-                        FlatButton(
-                          onPressed: () => { Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            const CreateTemplate(title: 'We-Mail')))},
-                    color: Colors.blue.shade400,
-                          padding: EdgeInsets.all(12.0),
-                          child: Column(
-                            // Replace with a Row for horizontal icon + text
-                            children: <Widget>[
-                              Icon(
-                                
-                                Icons.add,size: 50,color: Colors.white,),
-                              
-                            ],
-                          ),
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      FlatButton(
+                        onPressed: () => {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) =>
+                                  const CreateTemplate(title: 'We-Mail')))
+                        },
+                        color: Colors.blue.shade400,
+                        padding: EdgeInsets.all(12.0),
+                        child: Column(
+                          // Replace with a Row for horizontal icon + text
+                          children: <Widget>[
+                            Icon(
+                              Icons.add,
+                              size: 50,
+                              color: Colors.white,
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
+              ),
               // Container(
               //   width: 150,
               //   margin: EdgeInsets.only(right: 20),
@@ -270,6 +339,3 @@ class TemplatesOverview extends StatelessWidget {
 //   }
   }
 }
-
-
-
